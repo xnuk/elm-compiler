@@ -42,7 +42,7 @@ Library
     if flag(dev)
         ghc-options: -O0 -W -Werror
     else
-        ghc-options: -O2
+        ghc-options: -O2 -Wall
 
     Hs-Source-Dirs:
         src
@@ -139,11 +139,11 @@ Library
 
     Build-depends:
         aeson >= 0.11,
-        aeson-pretty < 0.8,
+        aeson-pretty < 0.9,
         ansi-terminal >= 0.6.2.1 && < 0.7,
         ansi-wl-pprint >= 0.6.7 && < 0.7,
         base >=4.2 && <5,
-        binary >= 0.7.0.0 && < 0.8,
+        binary >= 0.7.0.0 && < 0.9,
         bytestring >= 0.9 && < 0.11,
         containers >= 0.3 && < 0.6,
         directory >= 1.0 && < 2.0,
@@ -160,7 +160,7 @@ Library
 
 Executable elm
     ghc-options:
-        -threaded -O2 -W
+        -threaded -O2 -Wall
 
     Hs-Source-Dirs:
         src
@@ -175,7 +175,7 @@ Executable elm
     Build-depends:
         base >=4.2 && <5,
         aeson >= 0.11,
-        binary >= 0.7.0.0 && < 0.8,
+        binary >= 0.7.0.0 && < 0.9,
         directory >= 1.0 && < 2.0,
         filepath >= 1 && < 2.0,
         text >= 1 && < 2,
@@ -184,7 +184,7 @@ Executable elm
 
 Test-Suite compiler-tests
     ghc-options:
-        -O0
+        -O0 -Wall
 
     Type:
         exitcode-stdio-1.0
@@ -209,11 +209,11 @@ Test-Suite compiler-tests
         HUnit >= 1.1 && < 2,
         QuickCheck >= 2 && < 3,
         aeson >= 0.11,
-        aeson-pretty < 0.8,
+        aeson-pretty < 0.9,
         ansi-terminal >= 0.6.2.1 && < 0.7,
         ansi-wl-pprint >= 0.6.7 && < 0.7,
         base >=4.2 && <5,
-        binary >= 0.7.0.0 && < 0.8,
+        binary >= 0.7.0.0 && < 0.9,
         bytestring >= 0.9 && < 0.11,
         containers >= 0.3 && < 0.6,
         directory >= 1.0 && < 2.0,
